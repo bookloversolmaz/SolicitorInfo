@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "nM9R9bP6fzI=",
+  "success": true,
+  "projectFilePath": "/home/spurser/Solicitor_info/SolicitorInfo/SolicitorInfo.csproj",
+  "expectedPackageFiles": [
+    "/home/spurser/.nuget/packages/microsoft.aspnetcore.diagnostics.entityframeworkcore/10.0.8/microsoft.aspnetcore.diagnostics.entityframeworkcore.10.0.8.nupkg.sha512",
+    "/home/spurser/.nuget/packages/microsoft.aspnetcore.openapi/10.0.8/microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
+    "/home/spurser/.nuget/packages/microsoft.entityframeworkcore/10.0.8/microsoft.entityframeworkcore.10.0.8.nupkg.sha512",
+    "/home/spurser/.nuget/packages/microsoft.entityframeworkcore.abstractions/10.0.8/microsoft.entityframeworkcore.abstractions.10.0.8.nupkg.sha512",
+    "/home/spurser/.nuget/packages/microsoft.entityframeworkcore.analyzers/10.0.8/microsoft.entityframeworkcore.analyzers.10.0.8.nupkg.sha512",
+    "/home/spurser/.nuget/packages/microsoft.entityframeworkcore.inmemory/10.0.8/microsoft.entityframeworkcore.inmemory.10.0.8.nupkg.sha512",
+    "/home/spurser/.nuget/packages/microsoft.entityframeworkcore.relational/10.0.8/microsoft.entityframeworkcore.relational.10.0.8.nupkg.sha512",
+    "/home/spurser/.nuget/packages/microsoft.openapi/2.0.0/microsoft.openapi.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
