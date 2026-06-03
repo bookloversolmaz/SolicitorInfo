@@ -4,7 +4,7 @@ namespace SolicitorInfo.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class WeatherForecastController : ControllerBase
+public class SolicitorController : ControllerBase
 {
     private static readonly string[] Summaries =
     [
