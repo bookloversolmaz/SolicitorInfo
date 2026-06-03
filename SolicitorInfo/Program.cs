@@ -1,4 +1,6 @@
 using SolicitorInfo.Models;
+using SolicitorInfo.Repository;
+using SolicitorInfo.Scrapers;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,12 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddDbContext<SolicitorContext>(opt =>
     opt.UseInMemoryDatabase("Solicitor"));
+builder.Services.AddScoped<ISolicitorRepository,
+                                SolicitorRepository>();
+builder.Services.AddScoped<IScrapingService,
+                            ScrapingService>();
+
+builder.Services.AddHttpClient<SolicitorScraper>();
 
 var app = builder.Build();
 

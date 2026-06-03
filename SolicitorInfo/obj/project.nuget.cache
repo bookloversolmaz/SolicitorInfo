@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "nM9R9bP6fzI=",
+  "dgSpecHash": "XrgVZ/JGvBY=",
   "success": true,
-  "projectFilePath": "/home/spurser/Solicitor_info/SolicitorInfo/SolicitorInfo.csproj",
+  "projectFilePath": "/home/spurser/SolicitorInfo/SolicitorInfo/SolicitorInfo.csproj",
   "expectedPackageFiles": [
+    "/home/spurser/.nuget/packages/htmlagilitypack/1.12.4/htmlagilitypack.1.12.4.nupkg.sha512",
+    "/home/spurser/.nuget/packages/htmlagilitypack.cssselectors.netcore/1.2.1/htmlagilitypack.cssselectors.netcore.1.2.1.nupkg.sha512",
     "/home/spurser/.nuget/packages/microsoft.aspnetcore.diagnostics.entityframeworkcore/10.0.8/microsoft.aspnetcore.diagnostics.entityframeworkcore.10.0.8.nupkg.sha512",
     "/home/spurser/.nuget/packages/microsoft.aspnetcore.openapi/10.0.8/microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
     "/home/spurser/.nuget/packages/microsoft.entityframeworkcore/10.0.8/microsoft.entityframeworkcore.10.0.8.nupkg.sha512",

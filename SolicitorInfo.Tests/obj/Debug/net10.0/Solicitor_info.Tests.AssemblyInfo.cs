@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Solicitor_info.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d2a389d0cef749c78fa1b89117028c13d5b5960")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83c1561e911b8da355ed9a3b05dc762dca935319")]
 [assembly: System.Reflection.AssemblyProductAttribute("Solicitor_info.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Solicitor_info.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

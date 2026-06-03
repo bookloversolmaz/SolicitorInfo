@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/spurser/Solicitor_info/SolicitorInfo/SolicitorInfo.csproj": {}
+    "/home/spurser/SolicitorInfo/SolicitorInfo/SolicitorInfo.csproj": {}
   },
   "projects": {
-    "/home/spurser/Solicitor_info/SolicitorInfo/SolicitorInfo.csproj": {
+    "/home/spurser/SolicitorInfo/SolicitorInfo/SolicitorInfo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/spurser/Solicitor_info/SolicitorInfo/SolicitorInfo.csproj",
+        "projectUniqueName": "/home/spurser/SolicitorInfo/SolicitorInfo/SolicitorInfo.csproj",
         "projectName": "SolicitorInfo",
-        "projectPath": "/home/spurser/Solicitor_info/SolicitorInfo/SolicitorInfo.csproj",
+        "projectPath": "/home/spurser/SolicitorInfo/SolicitorInfo/SolicitorInfo.csproj",
         "packagesPath": "/home/spurser/.nuget/packages/",
-        "outputPath": "/home/spurser/Solicitor_info/SolicitorInfo/obj/",
+        "outputPath": "/home/spurser/SolicitorInfo/SolicitorInfo/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/spurser/.nuget/NuGet/NuGet.Config"
@@ -45,6 +45,14 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "HtmlAgilityPack": {
+              "target": "Package",
+              "version": "[1.12.4, )"
+            },
+            "HtmlAgilityPack.CssSelectors.NetCore": {
+              "target": "Package",
+              "version": "[1.2.1, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[10.0.8, )"
