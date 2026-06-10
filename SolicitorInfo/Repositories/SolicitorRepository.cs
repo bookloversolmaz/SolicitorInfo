@@ -19,10 +19,19 @@ namespace SolicitorInfo.Repository
         }
 
         // Read, get everything from the database
-        public async Task<List<SolicitorItem>> GetAllAsync() 
-        { 
-            return await _solicitorContext.SolicitorItems.ToListAsync(); 
-        } 
+        public async Task<List<SolicitorItem>> GetAllAsync(string? location = null)
+        {
+            // Start with full query (not executed yet)
+            var query = _solicitorContext.SolicitorItems.AsQueryable();
+
+            // Apply filter only if provided
+            if (!string.IsNullOrWhiteSpace(location))
+            {
+                query = query.Where(x => x.Location == location);
+            }
+
+            return await query.ToListAsync();
+        }
     
         // Create, save multiple results in one go
         // Add range is included here so that it call add multiple items in one call

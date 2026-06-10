@@ -17,9 +17,10 @@ public class SolicitorsController : ControllerBase
 
     // Returns all stored solicitors from DB
     [HttpGet]
-    public async Task<ActionResult<List<SolicitorItem>>> Get()
+    // [FromQuery] string? location gets /api/solicitors?location= for example London
+    public async Task<ActionResult<List<SolicitorItem>>> Get([FromQuery] string? location)
     {
-        var items = await _solicitorRepository.GetAllAsync();
+        var items = await _solicitorRepository.GetAllAsync(location);
 
         return Ok(items);
     }

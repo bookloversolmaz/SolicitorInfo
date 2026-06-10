@@ -5,18 +5,31 @@ namespace SolicitorInfo.Scrapers
     public class SolicitorScraper
     {
         private readonly HttpClient _httpClient;
+
+        private readonly SolicitorContext _solicitorContext;
         
-        public SolicitorScraper(HttpClient httpClient)
+        public SolicitorScraper(HttpClient httpClient, SolicitorContext solicitorContext)
         {
             _httpClient = httpClient;
+            _solicitorContext = solicitorContext;
+
+            // added this so that the request looks like a browse to prevent rejction from the website
+            _httpClient.DefaultRequestHeaders.Add(
+                "User-Agent",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36");
         }
         // 1. Download the HTML page
         public async Task<List<SolicitorItem>> ScrapeAsync(string location)
         {
+            
+            // Clear old data first
+            _solicitorContext.SolicitorItems.RemoveRange(_solicitorContext.SolicitorItems);
+            await _solicitorContext.SaveChangesAsync();
+
             var results = new List<SolicitorItem>();
             
             // Build URL for the location search
-            var url = $"https://www.solicitors.com/{location}-solicitors.html";
+            var url = $"https://www.solicitors.com/conveyancing+{location.ToLower()}.html";
 
             // Download raw HTML from website
             var html = await _httpClient.GetStringAsync(url);
@@ -67,6 +80,10 @@ namespace SolicitorInfo.Scrapers
                 // move to next solicitor, which is the length of the result item, loop until it reaches the end (-1)
                 currentIndex = startIndex + marker.Length;
             }
+        
+        // save the new results
+        await _solicitorContext.SolicitorItems.AddRangeAsync(results);
+        await _solicitorContext.SaveChangesAsync();
 
         return results;
     }
