@@ -17,11 +17,18 @@ public class SolicitorsController : ControllerBase
 
     // Returns all stored solicitors from DB
     [HttpGet]
-    // [FromQuery] string? location gets /api/solicitors?location= for example London
-    public async Task<ActionResult<List<SolicitorItem>>> Get([FromQuery] string? location)
+    public IActionResult GetAll([FromQuery] string? location)
     {
-        var items = await _solicitorRepository.GetAllAsync(location);
+        var data = _solicitorRepository.GetAll();
 
-        return Ok(items);
+        if (!string.IsNullOrWhiteSpace(location))
+        {
+            data = data
+                .Where(x => x.Location.Contains(location))
+                .ToList();
+        }
+
+        return Ok(data);
     }
+
 }

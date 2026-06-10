@@ -1,6 +1,7 @@
 using SolicitorInfo.Models;
 using SolicitorInfo.Repository;
 using SolicitorInfo.Scrapers;
+using SolicitorInfo.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowReact", policy =>
     {
         policy
-            .AllowAnyOrigin()
+            .WithOrigins("http://localhost:3000")
             .AllowAnyHeader()
             .AllowAnyMethod();
     });
@@ -25,6 +26,7 @@ builder.Services.AddScoped<ISolicitorRepository,
                                 SolicitorRepository>();
 builder.Services.AddScoped<IScrapingService,
                             ScrapingService>();
+builder.Services.AddSingleton<LocationService>();
 
 builder.Services.AddHttpClient<SolicitorScraper>();
 

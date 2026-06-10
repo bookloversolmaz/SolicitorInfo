@@ -16,3 +16,6 @@ A small app that automates the extraction of solicitors contact details by locat
 * Can use JavaScript frameworks if there is time
 
 ## How to run the application
+For the backend go to ~/SolicitorInfo/SolicitorInfo and run dotnet run.
+For the frontend go to ~/SolicitorInfo/solicitor-ui$ and run npm start.
+Both the back and frontend broswers should open. Go to the React frontend and choose from one of the cities in the dropdown. Then click Run scrape. You will see a list of results.
