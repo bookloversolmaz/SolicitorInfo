@@ -4,7 +4,7 @@ public class SolicitorItem
 {
     public long Id {get; set;}
     public required string SolicitorName {get; set;}
-    public required List<string> Location {get; set;}
+    public required string Location {get; set;}
 
     // PhysicalLocation differs from location as location is one of the eight cities listed in the task, whereas
     // PhysicalLocation is where they are actually based i.e Location = London, PhysicalLocation = Croydon.

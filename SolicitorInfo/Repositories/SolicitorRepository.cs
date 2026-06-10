@@ -18,20 +18,13 @@ namespace SolicitorInfo.Repository
             _solicitorContext = solicitorContext;
         }
 
+        // Read, get everything from the database
         public async Task<List<SolicitorItem>> GetAllAsync() 
         { 
             return await _solicitorContext.SolicitorItems.ToListAsync(); 
         } 
     
-        public async Task<SolicitorItem?> GetByIdAsync(long id) 
-        { 
-            return await _solicitorContext.SolicitorItems.FindAsync(id); 
-        } 
-        public async Task AddAsync(SolicitorItem item) 
-        { 
-            _solicitorContext.SolicitorItems.Add(item); 
-            await _solicitorContext.SaveChangesAsync(); 
-        } 
+        // Create, save multiple results in one go
         // Add range is included here so that it call add multiple items in one call
         public async Task AddRangeAsync(List<SolicitorItem> items) 
         { 

@@ -6,9 +6,9 @@ namespace SolicitorInfo.Repository
     {
         Task<List<SolicitorItem>> GetAllAsync();
 
-        Task<SolicitorItem?> GetByIdAsync(long id);
+        // Task<SolicitorItem?> GetByIdAsync(long id);
 
-        Task AddAsync(SolicitorItem solicitorItem);
+        // Task AddAsync(SolicitorItem solicitorItem);
 
         Task AddRangeAsync(List<SolicitorItem> solicitorItems);
     }

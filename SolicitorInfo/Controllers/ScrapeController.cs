@@ -5,7 +5,7 @@ using SolicitorInfo.Repository;
 namespace Scrape.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/scrape")]
     public class ScrapeController : ControllerBase
     {
         private readonly IScrapingService _scrapingService;
@@ -15,14 +15,9 @@ namespace Scrape.Controllers
             _scrapingService = scrapingService;
         }
 
-        [HttpGet]
-        public IActionResult Get()
-        {
-            return Ok("API is working");
-        }
-
+        // Starts scraping process
         [HttpPost]
-        public async Task<IActionResult> Scrape([FromBody] List<string> locations)
+        public async Task<ActionResult<List<SolicitorItem>>> Scrape([FromBody] List<string> locations)
         {
             var results = await _scrapingService.ScrapeLocationsAsync(locations);
 
